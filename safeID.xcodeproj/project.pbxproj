@@ -14,6 +14,8 @@
 		F435367E1BE1DBBF0092239E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F435367C1BE1DBBF0092239E /* Main.storyboard */; };
 		F43536801BE1DBBF0092239E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F435367F1BE1DBBF0092239E /* Assets.xcassets */; };
 		F43536831BE1DBBF0092239E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F43536811BE1DBBF0092239E /* LaunchScreen.storyboard */; };
+		F435368B1BE1DC400092239E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F435368A1BE1DC400092239E /* LoginViewController.swift */; };
+		F4AB4B111BE6D77A0084E2B3 /* TouchID.png in Resources */ = {isa = PBXBuildFile; fileRef = F4AB4B101BE6D77A0084E2B3 /* TouchID.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		F435367F1BE1DBBF0092239E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F43536821BE1DBBF0092239E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F43536841BE1DBBF0092239E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F435368A1BE1DC400092239E /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		F4AB4B101BE6D77A0084E2B3 /* TouchID.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TouchID.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +66,8 @@
 				F43536781BE1DBBE0092239E /* MasterViewController.swift */,
 				F435367A1BE1DBBE0092239E /* DetailViewController.swift */,
 				F435367C1BE1DBBF0092239E /* Main.storyboard */,
+				F4AB4B101BE6D77A0084E2B3 /* TouchID.png */,
+				F435368A1BE1DC400092239E /* LoginViewController.swift */,
 				F435367F1BE1DBBF0092239E /* Assets.xcassets */,
 				F43536811BE1DBBF0092239E /* LaunchScreen.storyboard */,
 				F43536841BE1DBBF0092239E /* Info.plist */,
@@ -102,6 +108,7 @@
 				TargetAttributes = {
 					F435366F1BE1DBBC0092239E = {
 						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = 6HXT9ZSCM9;
 					};
 				};
 			};
@@ -130,6 +137,7 @@
 			files = (
 				F43536831BE1DBBF0092239E /* LaunchScreen.storyboard in Resources */,
 				F43536801BE1DBBF0092239E /* Assets.xcassets in Resources */,
+				F4AB4B111BE6D77A0084E2B3 /* TouchID.png in Resources */,
 				F435367E1BE1DBBF0092239E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -144,6 +152,7 @@
 				F43536741BE1DBBD0092239E /* AppDelegate.swift in Sources */,
 				F43536771BE1DBBE0092239E /* safeID.xcdatamodeld in Sources */,
 				F43536791BE1DBBE0092239E /* MasterViewController.swift in Sources */,
+				F435368B1BE1DC400092239E /* LoginViewController.swift in Sources */,
 				F435367B1BE1DBBE0092239E /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -255,6 +264,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = safeID/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jorgeperales.safeID;
@@ -266,6 +276,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = safeID/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jorgeperales.safeID;
@@ -292,6 +303,7 @@
 				F43536891BE1DBBF0092239E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

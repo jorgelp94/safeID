@@ -13,12 +13,16 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
 
     var detailViewController: DetailViewController? = nil
     var managedObjectContext: NSManagedObjectContext? = nil
+    
+    var isAuthenticated: Bool = false;
 
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        self.navigationItem.leftBarButtonItem = self.editButtonItem()
+        //self.navigationItem.leftBarButtonItem = self.editButtonItem()
+        
+        isAuthenticated = false
 
         let addButton = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: "insertNewObject:")
         self.navigationItem.rightBarButtonItem = addButton
@@ -31,6 +35,19 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
     override func viewWillAppear(animated: Bool) {
         self.clearsSelectionOnViewWillAppear = self.splitViewController!.collapsed
         super.viewWillAppear(animated)
+        showLogin()
+    }
+    
+    func showLogin() {
+        if !isAuthenticated {
+            self.performSegueWithIdentifier("loginView", sender: self)
+        }
+    }
+    
+    @IBAction func unwindSegue(segue: UIStoryboardSegue) {
+        
+        isAuthenticated = true
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -187,6 +204,10 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         self.tableView.endUpdates()
     }
 
+    @IBAction func logoutAction(sender: UIBarButtonItem) {
+        isAuthenticated = false
+        showLogin()
+    }
     /*
      // Implementing the above methods to update the table view in response to individual changes may have performance implications if a large number of changes are made simultaneously. If this proves to be an issue, you can instead just implement controllerDidChangeContent: which notifies the delegate that all section and object changes have been processed.
      
